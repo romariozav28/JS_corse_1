@@ -1,17 +1,11 @@
-let a = 5;
-let b = 5.6;
-console.log(typeof BigInt(a));
+const salary = 80;
+let day_work = 5;
 
-a = 'строка';
-console.log(typeof a);
+let isReady = (11 <= (day_work * 5 + day_work * (11 - 7)));
+let price = 80;
 
-let isAdmin = a >10;
-console.log(isAdmin);
+console.log(isReady);
+console.log(price);
 
-let c;
-console.log(typeof c);
-c = 5;
-console.log(typeof c);
-
-let d = null;
-console.log(typeof d);
+let c = 11 % 7;
+console.log(c);
