@@ -1,21 +1,16 @@
-//Операторы присваивания
+//Приоритеты
 
-let age = 18 + 5;
-age += 2;//age = age + 2
-age -= 3;//age = age - 3
-age *= 2;//age = age * 2 
-age /= 2;//age = age / 2
+//сравнение и арифметика
+const isSuited = 100 - 10 > 90 - 5;
+console.log(isSuited);
 
-age++;//age = age + 1
-age--;//age = age 1 1
+//группировка (скобки)
+const a = (6 + 10) / 2;
+console.log(a);
 
-console.log(age);
-
-//Операторы сравнения
-const vasia = 20;
-console.log(age > vasia);
-console.log(age >= vasia);
-console.log(age < vasia);
-console.log(age <= vasia);
-console.log(age == vasia);
-console.log(age != vasia);
+//ассоциативность(слева направо или наоборот)
+let b;
+let c;
+c = b = 100 + 50;
+console.log(c);
+console.log(b);
