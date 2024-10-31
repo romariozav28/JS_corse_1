@@ -1,16 +1,17 @@
-//Приоритеты
+let a = 5;
+let b = 5.6;
+console.log(typeof BigInt(a));
 
-//сравнение и арифметика
-const isSuited = 100 - 10 > 90 - 5;
-console.log(isSuited);
+a = 'строка';
+console.log(typeof a);
 
-//группировка (скобки)
-const a = (6 + 10) / 2;
-console.log(a);
+let isAdmin = a >10;
+console.log(isAdmin);
 
-//ассоциативность(слева направо или наоборот)
-let b;
 let c;
-c = b = 100 + 50;
-console.log(c);
-console.log(b);
+console.log(typeof c);
+c = 5;
+console.log(typeof c);
+
+let d = null;
+console.log(typeof d);
