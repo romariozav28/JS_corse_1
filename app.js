@@ -1,10 +1,12 @@
-const money = 10;
+const rate = 7;
+const startBalance = 12000;
+const endBalance = 14000;
+const period = 2;
 
-if (money > 50) {
-    console.log('Может купить наш продукт');
-} else if (money > 5) {
-    console.log('Куплен мини продукт');
+let balance = startBalance * ((1 + rate / 12 / 100) ** (period * 12));
+if (balance > endBalance) {
+    console.log(`Покупка состоится
+Остаток средств: ${balance - endBalance}`);
 } else {
-    console.log('Не хватает баланса');
+    console.log('Покупка не состоится (((');
 }
-console.log('Итог');
