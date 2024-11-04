@@ -1,6 +1,12 @@
-const bmwX3price = 100000;
-const fordFocusprice = 20000;
-const budget = 20000;
+const a = prompt('Введите сумму 7 + 15');
 
-let message = budget > bmwX3price ? 'BMW' : 'Велосипед';
-console.log(`Я хочу купить ${message}`);
+//console.log(a === '15' ? 'Успех' : a === 'Я не робот' ? 'Успех' : 'вы робот');
+
+switch(true) {
+    case a === '15':
+    case a === 'Я не робот':
+        console.log('Успех');
+        break;
+    default:
+        console.log('Вы робот');
+}
