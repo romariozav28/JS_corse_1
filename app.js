@@ -1,12 +1,14 @@
-const rate = 7;
-const startBalance = 12000;
-const endBalance = 14000;
-const period = 2;
+const secretNumber = '7';
 
-let balance = startBalance * ((1 + rate / 12 / 100) ** (period * 12));
-if (balance > endBalance) {
-    console.log(`Покупка состоится
-Остаток средств: ${balance - endBalance}`);
-} else {
-    console.log('Покупка не состоится (((');
+if(secretNumber === 7) {
+    console.log('Угадал строго');
+}
+
+//преведение типа чтобы выполнилось строгое равенство
+if(Number(secretNumber) === 7) {
+    console.log('Угадал строго');
+}
+
+if(secretNumber == 7) {
+    console.log('Угадал не строго');
 }
