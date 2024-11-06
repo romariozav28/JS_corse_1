@@ -1,12 +1,21 @@
-const a = prompt('Введите сумму 7 + 15');
+console.log('Вася' || 'Олег');
+console.log(false || 'Олег');
+console.log('Вася' || false);
+console.log(false || false);
+console.log(true || 'Олег');
+console.log('Вася' || true);
 
-//console.log(a === '15' ? 'Успех' : a === 'Я не робот' ? 'Успех' : 'вы робот');
+console.log('Вася' && 'Олег');
+console.log(false && 'Олег');
+console.log('Вася' && false);
+console.log(false && false);
+console.log(true && 'Олег');
+console.log('Вася' && true);
 
-switch(true) {
-    case a === '15':
-    case a === 'Я не робот':
-        console.log('Успех');
-        break;
-    default:
-        console.log('Вы робот');
-}
+let a = 'Марина';
+const userName = a || 'Петя';
+console.log(userName);
+
+const isAdmin = false;
+const fileName = isAdmin && 'file.mp4';
+console.log(fileName);
