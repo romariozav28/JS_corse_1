@@ -1,19 +1,17 @@
-const role1 = 'admin';
-const role2 = 'user';
-const role3 = 'superuser';
+const roles = ['user', 'admin', 'manager'];
 
-const roles = ['admin', 'user', 'superuser'];
-const userInfo = ['Аня', 25];
-console.log(roles);
-console.log(roles[0]);
-console.log(roles.length);
-console.log(roles[roles.length-1]);
+const elIndex = roles.indexOf('admin');
+console.log(elIndex);
+const elIndex2 = roles.indexOf('superuser');
+console.log(elIndex2);
 
-console.log(roles.at(0));
-console.log(roles.at(-1));
+if(roles.indexOf('admin')>=0){
+    console.log('Доступ есть');
+}
 
-const usersAge = [2040-2022, 10>0 ? 5 : 0];
-console.log(usersAge);
+console.log(roles.includes('admin'));
+console.log(roles.includes('superuser'));
 
-const userNames = new Array('Вася', 'Петя', 'Катя');
-console.log(userNames);
+if(roles.includes('admin')){
+    console.log('Доступ есть');
+}
