@@ -1,15 +1,19 @@
-const age = 23;
-const isActive = false;
-const cash = 1900;
+const role1 = 'admin';
+const role2 = 'user';
+const role3 = 'superuser';
 
+const roles = ['admin', 'user', 'superuser'];
+const userInfo = ['Аня', 25];
+console.log(roles);
+console.log(roles[0]);
+console.log(roles.length);
+console.log(roles[roles.length-1]);
 
-function isCredit(age, isActive) {
-    return age > 24 ? isActive ? 500 : 100 : 0;
-}
+console.log(roles.at(0));
+console.log(roles.at(-1));
 
-function isBuy(age, isActive, cash){
-    const credit = isCredit(age, isActive);
-    return (credit + cash) >= 2000 ? 'Может купить' : 'Не может купить';
-}
+const usersAge = [2040-2022, 10>0 ? 5 : 0];
+console.log(usersAge);
 
-console.log(isBuy(age, isActive, cash));
+const userNames = new Array('Вася', 'Петя', 'Катя');
+console.log(userNames);
