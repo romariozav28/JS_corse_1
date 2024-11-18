@@ -1,5 +1,3 @@
-const data = [1, 2, 3, 4, 5, 6];
-
-const [one, two, ...others] = data;
-console.log(one, two, others);
-console.log(data);
+for(let i = 1; i<10; i++){
+    console.log(`Наш баланс ${i}$`);
+}
