@@ -1,9 +1,13 @@
-const score = [5, 10, 0, 15];
+const transactionInUSD = [10, -7, 50, -10, 100];
 
-/* for( const [i, el] of score.entries()){
-    console.log(`Раунд ${i+1}: ${el}`);
-} */
+const transactionInRUB = [];
+for(const transaction of transactionInUSD) {
+    transactionInRUB.push(transaction * 60);
+}
+console.log(transactionInRUB);
 
-score.forEach((el, i) => {
-    console.log(`Раунд ${i+1}: ${el}`);
+const transactionInRUB2 = transactionInUSD.map((transaction, i) => {
+    console.log(`${i}: ${transaction * 60} `);
+    return transaction * 60;
 })
+console.log(transactionInRUB2);
