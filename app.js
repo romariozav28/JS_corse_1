@@ -1,13 +1,6 @@
-const arr = [1, 4, 4, 10];
+const arr = [1, 4, 4, 10, 20];
 
-const avg = arr.reduce((acc, number, index, array) => {
-    if(index != array.length - 1){
-        return acc += number;
-    } else {
-        acc += number;
-        return acc/array.length;
-    }
-    
-}, 0)
-
-console.log(avg);
+let elGT5 = arr.find(el => el > 5);
+let elGT5Index = arr.findIndex(el => el > 5);
+console.log(elGT5);
+console.log(elGT5Index);
