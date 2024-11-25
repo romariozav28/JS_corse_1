@@ -1,7 +1,13 @@
-const userName = 'Вася aka Terminator Пупкин';
+const str = 'Вася Пупкина';
 
-const firstName = userName.slice(0, userName.indexOf(' '));
-const lastName = userName.slice(userName.lastIndexOf(' ')+1);
-console.log(firstName, lastName);
+console.log(str.includes('а'));
+console.log(str.startsWith('В'));
+console.log(str.endsWith('н'));
+console.log(new String('Вася Пупкин').includes('а'));
+
+console.log(str.toLowerCase());
+console.log(str.toUpperCase());
+console.log(str.replace('В', 'Ф'));
+console.log(str.replaceAll('а', 'и'));
 
 
