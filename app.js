@@ -1,3 +1,7 @@
-const card = '2342834503458353';
-
-console.log(card.slice(card.length - 4, card.length).padStart(card.length, '*'));
+const userArray = ['Вася', 'Пупкин', 24];
+const user = {
+    name: 'Вася',
+    surname: 'Пупкин',
+    age: 24,
+    skills: []
+}
