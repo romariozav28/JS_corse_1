@@ -1,10 +1,3 @@
-const userFullName = 'Вася Пупкин Васильевич';
-console.log(userFullName.split(' '));
-
-const [firstName, familyName, lastName] = userFullName.split(' ');
-console.log(firstName);
-console.log(familyName);
-console.log(lastName);
-
-const arr = ['Ты', 'хорошо', 'знаешь', 'JS'];
-console.log(arr.join(' '));
+const film = 'Звездные войны';
+console.log(film.padStart(film.length+5, '*').padEnd(film.length+10, '*'));
+console.log((film.padStart(film.length+5, '*').padEnd(film.length+10, '*') + '\n').repeat(5));
