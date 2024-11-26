@@ -1,13 +1,10 @@
-const str = 'Вася Пупкина';
+const userFullName = 'Вася Пупкин Васильевич';
+console.log(userFullName.split(' '));
 
-console.log(str.includes('а'));
-console.log(str.startsWith('В'));
-console.log(str.endsWith('н'));
-console.log(new String('Вася Пупкин').includes('а'));
+const [firstName, familyName, lastName] = userFullName.split(' ');
+console.log(firstName);
+console.log(familyName);
+console.log(lastName);
 
-console.log(str.toLowerCase());
-console.log(str.toUpperCase());
-console.log(str.replace('В', 'Ф'));
-console.log(str.replaceAll('а', 'и'));
-
-
+const arr = ['Ты', 'хорошо', 'знаешь', 'JS'];
+console.log(arr.join(' '));
