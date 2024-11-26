@@ -1,24 +1,8 @@
-const userArray = ['Вася', 'Пупкин', 24];
-const user = {
-    name: 'Вася',
-    surname: 'Пупкин',
-    age: 24,
-    skills: ['Программирование', 'Готовка'],
-    eduBasic: 'Школа 10',
-    eduPro: 'МФТИ'
-}
+const users = [
+    {name: 'Вася', age: 30},
+    {name: 'Катя', age: 18},
+    {name: 'Аня', age: 40},
+    {name: 'Петя', age: 25},
+];
 
-console.log(user);
-console.log(user.skills);
-console.log(user.skills[0]);
-console.log(user['skills']);
-console.log(user['skills'][0]);
-
-const level = 'Pro';
-console.log(user['edu' + level]);
-
-/* const res = prompt('Введите свойство');
-console.log(user[res]); */
-
-user['city'] = 'Москва';
-console.log(user);
+console.log(users.sort((a, b) => a.age - b.age));
