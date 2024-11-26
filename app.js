@@ -1,3 +1,3 @@
-const film = 'Звездные войны';
-console.log(film.padStart(film.length+5, '*').padEnd(film.length+10, '*'));
-console.log((film.padStart(film.length+5, '*').padEnd(film.length+10, '*') + '\n').repeat(5));
+const card = '2342834503458353';
+
+console.log(card.slice(card.length - 4, card.length).padStart(card.length, '*'));
