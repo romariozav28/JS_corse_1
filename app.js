@@ -1,25 +1,29 @@
-const cities = {
-    msk: {
-        let: 200,
-        temp: 25
-    },
-    spb: {
-        let: 100,
-        temp: 20
-    }
+let user = {
+    name: 'Вася',
+    age: 40,
+    city: 'Moscow'
+}
+
+const {age, ...userWithoutAge} = user;
+console.log(age);
+console.log(userWithoutAge);
+
+const additionalData = {
+    skills: ['Разработка', 'Дизайн'],
+    creditCard: '2343-9876-9034-6745'
 };
 
-let sumTemp = 0;
-let citiesCount = 0;
-for(const key in cities){
-    sumTemp += cities[key].temp;
-    citiesCount++;
-}
-console.log(sumTemp/citiesCount);
+//добавление новых свойств объекта работет даже если исходный объект как константа
+/* user.skills = additionalData.skills;
+user.creditCard = additionalData.creditCard;
+console.log(user); */
 
-let sumTemp2 = 0;
-let citiesCount2 = Object.keys(cities).length;
-for(const key of Object.keys(cities)){
-    sumTemp2 += cities[key].temp;
+//добавление свойства - работает даже если исходный объект как константа
+//user.test = 'ljasbvnkadjn';
+
+//работает только если исходный объект let
+user = {
+    ...user, //взяли все из объекта user
+    ...additionalData //взяли все из объекта additionalData
 }
-console.log(sumTemp2/citiesCount2);
+console.log(user);
