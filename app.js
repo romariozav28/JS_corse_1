@@ -1,45 +1,17 @@
-const warehouse = {
-    goods: [],
+'use strict';
 
-    findGoodById: function (id) {
-        return this.goods.find(g => g.id == id)
-        },
+let firstname = 'Anton';
+let firstname2 = firstname;
+firstname = 'New';
 
-    addGood: function (good) {
-        const existGood = this.findGoodById(good.id)
-        if(existGood) {
-            console,log('Этот товар уже есть на складе');
-        }
-        this.goods.push(good);
-    },
-    getWeightKg: function () {
-        return this.goods.reduce((acc, el) => 
-        acc += el.weight?.kg ? el.weight.kg : 0,
-    0)
-    }
+console.log(firstname);
+console.log(firstname2);
+
+const user1 = {
+    name: 'Anton'
 };
 
-const car = {
-    id: 1,
-    weight: {
-        kg: 100
-    },
-    brand: 'Ford'
-};
-const chair = {
-    id: 2,
-    weight: {
-        kg: 2
-    }
-};
-const paper = {
-    id: 3,
-    color: 'red'
-};
-
-warehouse.addGood(car);
-warehouse.addGood(chair);
-warehouse.addGood(paper);
-console.log(warehouse);
-console.log(warehouse['goods']);
-console.log(warehouse.findGoodById(4));
+const user2 = user1;
+user2.name = 'New';
+console.log(user1);
+console.log(user2);
