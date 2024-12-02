@@ -1,17 +1,19 @@
 'use strict';
 
-let firstname = 'Anton';
-let firstname2 = firstname;
-firstname = 'New';
-
-console.log(firstname);
-console.log(firstname2);
-
-const user1 = {
-    name: 'Anton'
+const user = {
+    name: 'Anton',
+    id: 1,
+    roles: ['Admin']
 };
 
-const user2 = user1;
-user2.name = 'New';
-console.log(user1);
-console.log(user2);
+/* const newUser = Object.assign({}, user);
+user.name = 'NewUser';
+ */
+const newUser2 = {
+    ...user 
+};
+newUser2.name = 'newUser';
+newUser2.roles.push('User');
+
+console.log(user);
+console.log(newUser2);
