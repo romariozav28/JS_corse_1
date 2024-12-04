@@ -1,19 +1,25 @@
-'use strict';
+'use strict'
 
+const successMessage = 'Успех';
 const user = {
-    name: 'Anton',
-    id: 1,
-    roles: ['Admin']
+    name: 'Вася',
+    roles: []
 };
 
-/* const newUser = Object.assign({}, user);
-user.name = 'NewUser';
- */
-const newUser2 = {
-    ...user 
-};
-newUser2.name = 'newUser';
-newUser2.roles.push('User');
+function addRole(user, role){
+    if(role == 'Admin'){
+        const message = 'Ошибка';
+        console.log(message);
+        return user;
+    }
+    user.roles.push(role);
+    console.log(successMessage);
 
-console.log(user);
-console.log(newUser2);
+    function logRoles(){
+        console.log(user.roles);
+    }
+    logRoles();
+    return user;
+}
+
+console.log(addRole(user, 'User'));
