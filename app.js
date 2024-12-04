@@ -1,22 +1,38 @@
-'use strict'
+'use strict';
 
+//console.log(this);
 
-//console.log(a); - выведет ошибку
-console.log(b);// b будет undefind
-const a = 3;
-var b = 2;
-console.log(a);// ошибки не будет так как вызов после объявления
-console.log(b);// b будет со значением 2
-
-addUser();//можно функцию вызвать и до объявления
-function addUser(){
-    //console.log('User added');
+function addNum(num1, num2){
+    console.log(this);
+    return num1 + num2;
 }
-addUser();//можно функцию вызвать и после объявления, лучше после
 
-//arr1();//- ошибка вызов стрелочной функции до объявления переменная const,
-//так же будет и с var, так как var при вызове до объявления undefined
-const arr1 = () => {
-    console.log('arr1');
+const addNum2 = (num1, num2) => {
+    console.log(this);
+    return num1 + num2;
 };
-arr1();//вызов функции после объявления const
+
+const user = {
+    name: 'Вася',
+    surname: 'Пупкин',
+    getFullName: function(){
+        console.log(this);
+        return this.name + ' ' + this.surname;
+    }
+};
+user.getFullName();
+
+const user2 = {
+    name: 'Марина',
+    surname: 'Катц'
+}
+user2.getFullName = user.getFullName;
+user2.getFullName();
+
+console.log(user.getFullName());
+console.log(user2.getFullName());
+
+const getFullName = user2.getFullName();
+
+
+console.log(addNum2(2, 3));
