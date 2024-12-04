@@ -1,25 +1,17 @@
 'use strict'
 
-const successMessage = 'Успех';
 const user = {
-    name: 'Вася',
+    name: 'Иван',
     roles: []
 };
 
-function addRole(user, role){
-    if(role == 'Admin'){
-        const message = 'Ошибка';
-        console.log(message);
-        return user;
-    }
+function addRole(){
+    const role = 'test';
     user.roles.push(role);
+    let successMessage = 'Ура';
+    //const role = 'test'; - ошибка, переменная объявлена и присвоена после использования
     console.log(successMessage);
-
-    function logRoles(){
-        console.log(user.roles);
-    }
-    logRoles();
-    return user;
 }
 
-console.log(addRole(user, 'User'));
+addRole();
+console.log(user);
