@@ -1,25 +1,37 @@
 'use strict';
 
-const user = {
-    name: 'Вася',
-    surname: 'Пупкин',
-    age: 20,
-    getUserInfo: function(){
-        console.log(this);
-        console.log(`${this.name} + ${this.surname}`);
-        const canDrink = () => {
-            if(this.age >= 18){
-                console.log('Может уже пить');
-            } else {
-                console.log('Не может еще пить');
-            }
-        };
-        canDrink();
-    },
-    getUserInfoArrow:() => {
-        console.log(`${this.name} ${this.surname}`);
+const audi = {
+    make: 'Audi',
+    model: 'A3',
+    year: 2021,
+    damages: [],
+    addDamage(part, rate){
+        console.log(
+            `У авто ${this.make} ${this.model} ${this.year} добавлено: повреждение ${part} со степенью ${rate}`
+        );
+        this.damages.push({
+            part,
+            rate
+        });
     }
 };
 
-user.getUserInfo();
-user.getUserInfoArrow();
+//audi.addDamage('Бампер', 10);
+
+const bmw = {
+    make: 'BMW',
+    model: 'X5',
+    year: 2022,
+    damages: []
+}
+
+//bmw.addDamage = audi.addDamage;
+//bmw.addDamage('Капот, 5');
+
+const addDamageFunc = audi.addDamage;
+
+addDamageFunc.call(bmw, 'Бампер', 2);
+addDamageFunc.call(audi, 'Капот', 10);
+
+addDamageFunc.apply(bmw, ['Бампер', 2]);
+addDamageFunc.apply(audi, ['Капот', 10]);
